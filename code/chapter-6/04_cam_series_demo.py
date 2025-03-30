@@ -17,11 +17,16 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 import torchvision.models as models
 
+#pip install pytorch-gradcam
+#pip install grad-cam 
+
 from pytorch_grad_cam import GradCAM, ScoreCAM, GradCAMPlusPlus, AblationCAM, XGradCAM, EigenCAM, FullGrad
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 from pytorch_grad_cam.utils.image import show_cam_on_image
 from torchvision.models import resnet50
 from matplotlib import pyplot as plt
+
+
 
 def img_transform(img_in, transform):
     """
@@ -59,7 +64,8 @@ def cam_factory(cam_name_):
 
 if __name__ == '__main__':
 
-    path_img = "both.png"
+    # path_img = "both.png"
+    path_img = "224.png"
     output_dir = "./Result"
 
     # 图片读取

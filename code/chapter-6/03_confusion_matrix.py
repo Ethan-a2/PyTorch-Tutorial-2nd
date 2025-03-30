@@ -24,6 +24,7 @@ import torch.nn.init as init
 from my_utils import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(device)
 
 train_bs = 128
 valid_bs = 128
@@ -63,7 +64,7 @@ valid_transform = transforms.Compose([
 # 构建MyDataset实例
 # root变量下需要存放cifar-10-python.tar.gz 文件
 # cifar-10-python.tar.gz可从 "https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz" 下载
-data_dir = r"F:\pytorch-tutorial-2nd\data\datasets\cifar10-office"
+data_dir = r"/media/code/dataset/cifar-10"
 train_set = torchvision.datasets.CIFAR10(root=data_dir, train=True, transform=train_transform, download=True)
 test_set = torchvision.datasets.CIFAR10(root=data_dir, train=False, transform=valid_transform, download=True)
 
