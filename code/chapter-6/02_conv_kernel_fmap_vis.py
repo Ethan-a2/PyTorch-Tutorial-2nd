@@ -53,7 +53,7 @@ if __name__ == "__main__":
 
     # 数据
     # you can download lena from anywhere. tip: lena(Lena Soderberg, 莱娜·瑟德贝里)
-    path_img = r"F:\pytorch-tutorial-2nd\data\imgs\lena.png"  # your path to image
+    path_img = r"/media/code/dataset/val2017/000000031248.jpg"  # your path to image
     normMean = [0.49139968, 0.48215827, 0.44653124]
     normStd = [0.24703233, 0.24348505, 0.26158768]
     norm_transform = transforms.Normalize(normMean, normStd)
